@@ -7,7 +7,7 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-#include "Polynomial_Cal" 
+#include "Polynomial_Cal.h" 
 Poterm ADD(Poterm First_term,Poterm Add_term)
 {
 }
