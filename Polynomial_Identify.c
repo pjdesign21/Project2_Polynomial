@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Poterm PolyIdentify(char *str)
 =======
 Term PolyIdentify(char *str , Poterm First_term)
@@ -21,6 +22,9 @@ Term PolyIdentify(char *str , Poterm First_term)
 =======
 Term PolyIdentify(char *str , Poterm First_term)
 >>>>>>> parent of 6c09777... push?
+=======
+Poterm PolyIdentify(char *str , Poterm Head)
+>>>>>>> parent of 3ec6264... PolyIdentify
 {
 	
 }

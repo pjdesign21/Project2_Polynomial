@@ -14,11 +14,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Param [in]:  char *str
+=======
+ * Param [in]:  char *str , Poterm Head
+>>>>>>> parent of 3ec6264... PolyIdentify
  * Param [out]: Poterm
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
+<<<<<<< HEAD
 Poterm PolyIdentify(char *str);
 =======
  * Param [in]:  char *str , Poterm First_term
@@ -44,3 +49,6 @@ Term PolyIdentify(char *str , Poterm First_term);
 ****************************************************************************/
 Term PolyIdentify(char *str , Poterm First_term);
 >>>>>>> parent of 6c09777... push?
+=======
+Poterm PolyIdentify(char *str , Poterm Head);
+>>>>>>> parent of 3ec6264... PolyIdentify
