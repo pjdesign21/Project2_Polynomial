@@ -61,8 +61,8 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
         }
         p = p->next;
     }
-    if ( First_term != NULL ) Append( p, First_term );
-    else Append( p, Add_term );
+    if ( First_term != NULL ) p->next = First_term;
+    else p->next = Add_term;
 
     return Result_term;
 }
