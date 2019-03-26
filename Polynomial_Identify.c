@@ -9,7 +9,11 @@
 ****************************************************************************/
 #include "Polynomial_Identify.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 Poterm PolyIdentify(char *str)
+=======
+Term PolyIdentify(char *str , Poterm First_term)
+>>>>>>> parent of 6c09777... push?
 =======
 Term PolyIdentify(char *str , Poterm First_term)
 >>>>>>> parent of 6c09777... push?
