@@ -13,7 +13,7 @@
  * Brief:       add a term
  * Param [in]:  Poterm First_term,term Add_term
  * Param [out]: Poterm First_term
- * Author:      
+ * Author:      Fang
  * Date:        2019/03/25
 ****************************************************************************/
 Poterm ADD(Poterm First_term,Poterm Add_term);
@@ -22,7 +22,7 @@ Poterm ADD(Poterm First_term,Poterm Add_term);
  * Brief:       minus a term
  * Param [in]:  Poterm First_term,term Minus_term
  * Param [out]: Poterm First_term
- * Author:      
+ * Author:      Fang
  * Date:        2019/03/25
 ****************************************************************************/
 Poterm MINUS(Poterm First_term,Poterm Minus_term);
@@ -31,7 +31,7 @@ Poterm MINUS(Poterm First_term,Poterm Minus_term);
  * Brief:       multiple a term
  * Param [in]:  Poterm First_term,term Multiple_term
  * Param [out]: Poterm First_term
- * Author:      
+ * Author:      Fang
  * Date:        2019/03/25
 ****************************************************************************/
 Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term);

@@ -7,23 +7,6 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-//#include "Polynomial_Base.h"
-#include "Polynomial_Identify.c"
-/****************************************************************************
- * Function:    init
- * Brief:       form a interactive interface
- * Param [in]:  NA
- * Param [out]: NA
- * Author:      
- * Date:        2019/03/25
-****************************************************************************/
+#include "Polynomial_Base"
 void init();
-/****************************************************************************
- * Function:    output
- * Brief:       Output the answer 
- * Param [in]:  Poterm t
- * Param [out]: NA
- * Author:      
- * Date:        2019/03/25
-****************************************************************************/
 void output(Poterm t);
