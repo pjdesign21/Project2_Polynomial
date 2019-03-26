@@ -10,6 +10,42 @@
 //#include "Polynomial_Base.h"
 #include "Polynomial_Cal.c"
 /****************************************************************************
+ * Function:    Isx
+ * Brief:       define whether a char is 'x'
+ * Param [in]:  char ch
+ * Param [out]: int32_t
+ * Author:      Fang
+ * Date:        2019/03/26
+****************************************************************************/
+static int32_t Isx(char ch);
+/****************************************************************************
+ * Function:    Isy
+ * Brief:       define whether a char is 'y'
+ * Param [in]:  char ch
+ * Param [out]: int32_t
+ * Author:      Fang
+ * Date:        2019/03/26
+****************************************************************************/
+static int32_t Isy(char ch);
+/****************************************************************************
+ * Function:    Isnum
+ * Brief:       define whether a char is num
+ * Param [in]:  char ch
+ * Param [out]: int32_t
+ * Author:      Fang
+ * Date:        2019/03/26
+****************************************************************************/
+static int32_t Isnum(char ch);
+/****************************************************************************
+ * Function:    ReadNum
+ * Brief:       Read a char string as a num
+ * Param [in]:  char *str,int32_t *l
+ * Param [out]: double_t
+ * Author:      Fang
+ * Date:        2019/03/26
+****************************************************************************/
+static double_t ReadNum(char *str,int32_t *l);
+/****************************************************************************
  * Function:    PolyIdentify
  * Brief:       Indentify char string as a term
  * Param [in]:  char *str 

@@ -12,6 +12,7 @@ typedef char char_t;
 typedef int int32_t;
 typedef struct Term *Poterm;
 typedef double double_t;
+typedef enum{False,True}bool_t;
 typedef enum {Add,Minus}operator_t;
 
 struct Term
