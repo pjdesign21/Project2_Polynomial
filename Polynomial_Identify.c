@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Poterm PolyIdentify(char *str)
 =======
 Term PolyIdentify(char *str , Poterm First_term)
@@ -25,6 +26,9 @@ Term PolyIdentify(char *str , Poterm First_term)
 =======
 Poterm PolyIdentify(char *str , Poterm Head)
 >>>>>>> parent of 3ec6264... PolyIdentify
+=======
+Poterm PolyIdentify(char *str , Poterm Head)
+>>>>>>> parent of 8872f46... Revert "1.2"
 {
 	
 }

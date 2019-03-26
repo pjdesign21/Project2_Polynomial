@@ -7,10 +7,12 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-#include "Polynomial_Base"
+//#include "Polynomial_Base.h"
+#include "Polynomial_Cal.c"
 /****************************************************************************
  * Function:    OpType 
  * Brief:       Indentify char string as a term
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,3 +54,11 @@ Term PolyIdentify(char *str , Poterm First_term);
 =======
 Poterm PolyIdentify(char *str , Poterm Head);
 >>>>>>> parent of 3ec6264... PolyIdentify
+=======
+ * Param [in]:  char *str , Poterm Head
+ * Param [out]: Poterm
+ * Author:      
+ * Date:        2019/03/25
+****************************************************************************/
+Poterm PolyIdentify(char *str , Poterm Head);
+>>>>>>> parent of 8872f46... Revert "1.2"
