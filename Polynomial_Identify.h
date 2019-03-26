@@ -7,14 +7,22 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-//#include "Polynomial_Base.h"
-#include "Polynomial_Cal.c"
+#include "Polynomial_Base"
 /****************************************************************************
  * Function:    OpType 
  * Brief:       Indentify char string as a term
+<<<<<<< HEAD
  * Param [in]:  char *str
  * Param [out]: Poterm
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
 Poterm PolyIdentify(char *str);
+=======
+ * Param [in]:  char *str , Poterm First_term
+ * Param [out]: Term
+ * Author:      Fang
+ * Date:        2019/03/25
+****************************************************************************/
+Term PolyIdentify(char *str , Poterm First_term);
+>>>>>>> parent of 6c09777... push?

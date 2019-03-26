@@ -8,7 +8,11 @@
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
 #include "Polynomial_Identify.h"
+<<<<<<< HEAD
 Poterm PolyIdentify(char *str)
+=======
+Term PolyIdentify(char *str , Poterm First_term)
+>>>>>>> parent of 6c09777... push?
 {
 	
 }
