@@ -10,55 +10,11 @@
 //#include "Polynomial_Base.h"
 #include "Polynomial_Cal.c"
 /****************************************************************************
- * Function:    OpType 
+ * Function:    PolyIdentify
  * Brief:       Indentify char string as a term
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- * Param [in]:  char *str
-=======
- * Param [in]:  char *str , Poterm Head
->>>>>>> parent of 3ec6264... PolyIdentify
+ * Param [in]:  char *str 
  * Param [out]: Poterm
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-<<<<<<< HEAD
 Poterm PolyIdentify(char *str);
-=======
- * Param [in]:  char *str , Poterm First_term
- * Param [out]: Term
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-Term PolyIdentify(char *str , Poterm First_term);
->>>>>>> parent of 6c09777... push?
-=======
- * Param [in]:  char *str , Poterm First_term
- * Param [out]: Term
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-Term PolyIdentify(char *str , Poterm First_term);
->>>>>>> parent of 6c09777... push?
-=======
- * Param [in]:  char *str , Poterm First_term
- * Param [out]: Term
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-Term PolyIdentify(char *str , Poterm First_term);
->>>>>>> parent of 6c09777... push?
-=======
-Poterm PolyIdentify(char *str , Poterm Head);
->>>>>>> parent of 3ec6264... PolyIdentify
-=======
- * Param [in]:  char *str , Poterm Head
- * Param [out]: Poterm
- * Author:      
- * Date:        2019/03/25
-****************************************************************************/
-Poterm PolyIdentify(char *str , Poterm Head);
->>>>>>> parent of 8872f46... Revert "1.2"

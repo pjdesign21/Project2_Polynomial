@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /****************************************************************************
  * \brief       
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
@@ -18,4 +16,3 @@ void output(Poterm t)
 {
 	
 }
->>>>>>> parent of 8872f46... Revert "1.2"

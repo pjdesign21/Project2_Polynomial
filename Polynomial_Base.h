@@ -29,8 +29,6 @@ struct Term
  * Date:        2019/03/25
 ****************************************************************************/
 extern operator_t OpType(char op);
-<<<<<<< HEAD
-=======
 /****************************************************************************
  * Function:    Powercmop 
  * Brief:       compare the power of term,if powera>powerb return 1
@@ -50,5 +48,4 @@ extern int32_t Powercmp(Poterm term_1,Poterm term_2);
  * Date:        2019/03/25
 ****************************************************************************/
 extern void Creat(Poterm TermTobeAdd,double Powerx,double Powery,double Cofficient);
->>>>>>> parent of 8872f46... Revert "1.2"
 

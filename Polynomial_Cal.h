@@ -16,7 +16,7 @@
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-Poterm ADD(Poterm First_term,term Add_term);
+Poterm ADD(Poterm First_term,Poterm Add_term);
 /****************************************************************************
  * Function:    MINUS
  * Brief:       minus a term
@@ -25,7 +25,7 @@ Poterm ADD(Poterm First_term,term Add_term);
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-Poterm MINUS(Poterm First_term,term Minus_term);
+Poterm MINUS(Poterm First_term,Poterm Minus_term);
 /****************************************************************************
  * Function:    MULTIPLE
  * Brief:       multiple a term
@@ -34,15 +34,5 @@ Poterm MINUS(Poterm First_term,term Minus_term);
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-Poterm MULTIPLE(Poterm First_term,term Multiple_term);
-/****************************************************************************
- * Function:    DIVIDE
- * Brief:       divide a term
- * Param [in]:  Poterm First_term,term Divide_term
- * Param [out]: Poterm First_term
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-Poterm DIVIDE(Poterm First_term,term Divide_term);
-
+Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term);
 
