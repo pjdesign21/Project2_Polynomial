@@ -12,9 +12,9 @@
 /****************************************************************************
  * Function:    OpType 
  * Brief:       Indentify char string as a term
- * Param [in]:  char *str , Poterm Head
+ * Param [in]:  char *str
  * Param [out]: Poterm
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-Poterm PolyIdentify(char *str , Poterm Head);
+Poterm PolyIdentify(char *str);
