@@ -8,7 +8,7 @@
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
 #include "Polynomial_Identify.h"
-Term PolyIdentify(char *str , Poterm First_term)
+Poterm PolyIdentify(char *str)
 {
 	
 }
