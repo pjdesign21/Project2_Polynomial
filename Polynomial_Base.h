@@ -31,7 +31,16 @@ struct Term
 ****************************************************************************/
 extern operator_t OpType(char op);
 /****************************************************************************
- * Function:    Powercmop 
+ * Function:    Cmp
+ * Brief:       function for qort
+ * Param [in]:  const void *a , const void *b
+ * Param [out]: int32_t
+ * Author:      Fang
+ * Date:        2019/03/25
+****************************************************************************/
+extern int32_t Cmp( const void *a , const void *b );
+/****************************************************************************
+ * Function:    Powercmp 
  * Brief:       compare the power of term,if powera>powerb return 1
  powera<powerb return -1 powera==powerb return 1
  * Param [in]:  Poterm term_1,Poterm term_2

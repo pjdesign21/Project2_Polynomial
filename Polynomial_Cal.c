@@ -10,24 +10,6 @@
 
 #include "Polynomial_Cal.h" 
 
-extern Poterm arrange( Poterm TermTobeArrange )
-{
-    Poterm p = TermTobeArrange->next;
-    struct Term Tmp_term[ 10 ];
-    int32_t n = 0;
-    while ( p != NULL ) Tmp_term[ n++ ] = *p;
-    sort( Tmp_term, n, sizeof( struct Term ), Powercmp );
-    p = TermTobeArrange;
-    for ( int32_t i = 0; i < n; i++ ) 
-    {
-        p->next->x = Tmp_term[ i ].x;
-        p->next->y = Tmp_term[ i ].y;
-        p->next->co = Tmp_term[ i ].co;
-        p = p->next;
-    }
-    return TermTobeArrange;
-}
-
 static Poterm coreverse( Poterm TermTobeReverse )
 {
     Poterm p = TermTobeReverse->next;

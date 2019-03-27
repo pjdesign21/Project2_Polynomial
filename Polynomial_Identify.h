@@ -10,6 +10,15 @@
 //#include "Polynomial_Base.h"
 #include "Polynomial_Cal.c"
 /****************************************************************************
+ * Function:    arrange
+ * Brief:       Arrange the term by power
+ * Param [in]:  Poterm TermTobeArrange
+ * Param [out]: Poterm
+ * Author:      Liu
+ * Date:        2019/03/27
+****************************************************************************/
+extern Poterm arrange( Poterm TermTobeArrange); 
+/****************************************************************************
  * Function:    Isx
  * Brief:       define whether a char is 'x'
  * Param [in]:  char ch
