@@ -7,8 +7,11 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-//#include "Polynomial_Base.h"
-#include "Polynomial_Cal.c"
+
+
+#include "Polynomial_Base.h"
+
+
 /****************************************************************************
  * Function:    arrange
  * Brief:       Arrange the term by power
@@ -18,6 +21,8 @@
  * Date:        2019/03/27
 ****************************************************************************/
 extern Poterm arrange( Poterm TermTobeArrange); 
+
+
 /****************************************************************************
  * Function:    Isx
  * Brief:       define whether a char is 'x'
@@ -27,6 +32,8 @@ extern Poterm arrange( Poterm TermTobeArrange);
  * Date:        2019/03/26
 ****************************************************************************/
 static int32_t Isx(char ch);
+
+
 /****************************************************************************
  * Function:    Isy
  * Brief:       define whether a char is 'y'
@@ -36,6 +43,8 @@ static int32_t Isx(char ch);
  * Date:        2019/03/26
 ****************************************************************************/
 static int32_t Isy(char ch);
+
+
 /****************************************************************************
  * Function:    Isnum
  * Brief:       define whether a char is num
@@ -45,6 +54,8 @@ static int32_t Isy(char ch);
  * Date:        2019/03/26
 ****************************************************************************/
 static int32_t Isnum(char ch);
+
+
 /****************************************************************************
  * Function:    ReadNum
  * Brief:       Read a char string as a num
@@ -54,6 +65,8 @@ static int32_t Isnum(char ch);
  * Date:        2019/03/26
 ****************************************************************************/
 static double_t ReadNum(char *str,int32_t *l);
+
+
 /****************************************************************************
  * Function:    PolyIdentify
  * Brief:       Indentify char string as a term

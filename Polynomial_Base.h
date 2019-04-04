@@ -7,7 +7,13 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
+
+#ifndef _POLYNOMIAL_H
+#define _POLYNOMIAL_H
+
 #include <stdlib.h>
+
+
 typedef char char_t;
 typedef int int32_t;
 typedef struct Term *Poterm;
@@ -59,3 +65,4 @@ extern int32_t Powercmp(Poterm term_1,Poterm term_2);
 ****************************************************************************/
 extern void Creat(Poterm TermTobeAdd,double Powerx,double Powery,double Cofficient);
 
+#endif

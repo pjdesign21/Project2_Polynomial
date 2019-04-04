@@ -7,9 +7,13 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
+
+
 #include "Polynomial_Identify.h"
+
 #include <stdlib.h>
 #include <stdio.h>
+
 extern Poterm arrange( Poterm TermTobeArrange )
 {
     Poterm p = TermTobeArrange->next;
@@ -27,6 +31,7 @@ extern Poterm arrange( Poterm TermTobeArrange )
     }
     return TermTobeArrange;
 }
+
 static double_t ReadNum(char *str,int32_t *l)
 {
 	double_t num,Time;
@@ -62,14 +67,18 @@ static double_t ReadNum(char *str,int32_t *l)
 		}
 	return num;
 }
+
 static int32_t Isnum(char ch)
 {
 	if(ch=='-'||ch=='+'||(ch>='0'&&ch<='9'))
 	return 1;
 	return 0;
 }
+
 static int32_t Isx(char ch){return ch=='x'?1:0;}
+
 static int32_t Isy(char ch){return ch=='y'?1:0;}
+
 Poterm PolyIdentify(char *str)
 {
 	int32_t l;

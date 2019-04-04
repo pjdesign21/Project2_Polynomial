@@ -7,8 +7,9 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
-//#include "Polynomial_Base.h"
-#include "Polynomial_Identify.c"
+
+#include "Polynomial_Base.h"
+
 /****************************************************************************
  * Function:    init
  * Brief:       form a interactive interface
@@ -18,6 +19,8 @@
  * Date:        2019/03/25
 ****************************************************************************/
 void init();
+
+
 /****************************************************************************
  * Function:    output
  * Brief:       Output the answer 
@@ -27,3 +30,9 @@ void init();
  * Date:        2019/03/25
 ****************************************************************************/
 void output(Poterm t);
+
+
+Poterm function1 (char *str);
+Poterm function2 (char *str);
+Poterm function3 (char *str);
+Poterm function4 (char *str);
