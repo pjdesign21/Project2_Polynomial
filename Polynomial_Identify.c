@@ -38,6 +38,8 @@ static double_t ReadNum(char *str,int32_t *l)
 	{
 		Minu=True;(*l)++;
 	}
+	if(str[*l]=='+')
+	(*l)++;
 	while((str[*l]>='0'&&str[*l]<='9')||str[*l]=='.')
 	{
 		if(str[*l]=='.')
@@ -53,7 +55,11 @@ static double_t ReadNum(char *str,int32_t *l)
 	}
 	if(Minu==True)num=-num;
 	num/=Time;
-	if(num==0)return -1;
+	if(num==0)
+		{
+			if(Minu==True)return -1;
+			else return 1;
+		}
 	return num;
 }
 static int32_t Isnum(char ch)
@@ -94,11 +100,17 @@ Poterm PolyIdentify(char *str)
 				l+=2;
 				Powerofx=ReadNum(str,&l);
 			}
+			if(str[l]!='y')
+			{
+				Py=True;
+				Powerofy=0;
+			}
 		}
 		if(Isy(str[l]))
 		{
 			if(Co==False)Cofficient=1; 
 			Py=True;
+			
 			if(str[l+1]!='^')
 			{
 				Powerofy=1;
@@ -108,6 +120,11 @@ Poterm PolyIdentify(char *str)
 			{
 				l+=2;
 				Powerofy=ReadNum(str,&l);
+			}
+			if(str[l]!='x')
+			{
+				Px=True;
+				Powerofx=0;
 			}
 		}
 		if(Px==True&&Py==True)
