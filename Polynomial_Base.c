@@ -36,7 +36,7 @@ extern int32_t Cmp( const void *a , const void *b )
 	else return d->x - c->x; 
 }
 
-extern void Creat(Poterm TermTobeAdd,double Powerx,double Powery,double Cofficient)
+extern void Creat(Poterm TermTobeAdd,int32_t Powerx,int32_t Powery,double Cofficient)
 {
 	Poterm Newterm;
 	Newterm=(Poterm)malloc(sizeof(struct Term));

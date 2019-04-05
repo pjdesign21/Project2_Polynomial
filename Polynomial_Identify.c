@@ -16,7 +16,7 @@ extern Poterm arrange( Poterm TermTobeArrange )
     Poterm p = TermTobeArrange->next;
     struct Term Tmp_term[ 10 ];
     int32_t n = 0,i;
-    while ( p != NULL ) Tmp_term[ n++ ] = *p;
+    while ( p != NULL ) Tmp_term[ n++ ] = *p, p = p->next;
     qsort( Tmp_term, n, sizeof(Tmp_term[0]), Cmp);
     p = TermTobeArrange;
     for (  i = 0; i < n; i++ ) 
@@ -139,7 +139,7 @@ Poterm PolyIdentify(char *str)
 			Co=Px=Py=False;
 		}
 	}
-	return Head;
+	return arrange( Head );
 }
 /*int main()
 {

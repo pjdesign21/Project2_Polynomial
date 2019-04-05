@@ -24,8 +24,8 @@ typedef enum {Add,Minus}operator_t;
 
 struct Term
 {
-	double_t x,y;				//power of x,y
-	double_t co;					//coefficient of the term
+	int32_t x,y;				//power of x,y
+	double_t co;				//coefficient of the term
 	Poterm next;
 };
 /****************************************************************************
@@ -59,11 +59,11 @@ extern int32_t Powercmp(Poterm term_1,Poterm term_2);
 /****************************************************************************
  * Function:    Creat
  * Brief:       creat a new node to the link
- * Param [in]:  Poterm TermTobeAdd,double Powerx,double Powery,double Cofficient
+ * Param [in]:  Poterm TermTobeAdd,int32_t Powerx,int32_t Powery,double Cofficient
  * Param [out]: NA
  * Author:      Fang
  * Date:        2019/03/25
 ****************************************************************************/
-extern void Creat(Poterm TermTobeAdd,double Powerx,double Powery,double Cofficient);
+extern void Creat(Poterm TermTobeAdd,int32_t Powerx,int32_t Powery,double Cofficient);
 
 #endif

@@ -20,13 +20,16 @@ static Poterm coreverse( Poterm TermTobeReverse )
 static Poterm product( Poterm TermTobeMult, Poterm term )
 {
     Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
+    Result_term->next = NULL;
     Poterm p = Result_term;
     TermTobeMult = TermTobeMult->next;
+    
     while ( TermTobeMult != NULL )
     {
         Creat( p, TermTobeMult->x + term->x, TermTobeMult->y + term->y, 
             TermTobeMult->co * term->co );
         TermTobeMult = TermTobeMult->next;
+        p = p->next;
     }
     return Result_term;
 }
@@ -35,8 +38,8 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
 {
     Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
     Poterm p = Result_term, a = First_term, b = Add_term;
-
     Result_term->next = NULL;
+
     First_term = a->next;
     Add_term = b->next;
     free( a );
@@ -49,17 +52,19 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
         if ( cmp == 0 )
         {
             if ( a->co + b->co != 0 )
+            {
                 Creat( p, a->x, a->y, a->co + a->co );
+                p = p->next;
+            }
             First_term = a->next, Add_term = b->next;
             free( a ), free( b );
         } else
         {
-            if ( cmp == 0 ) a = b;   
+            if ( cmp == -1 ) a = b;   
             p->next = a;
             First_term = a->next;
-            free( a );
+            p = p->next;
         }
-        p = p->next;
     }
     if ( First_term != NULL ) p->next = First_term;
     else p->next = Add_term;
@@ -74,8 +79,9 @@ extern Poterm MINUS(Poterm First_term,Poterm Minus_term)
 
 extern Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term)
 {
-    Poterm Result_term = (Poterm )malloc( sizeof( struct Term ) );
+    Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
     Multiple_term = Multiple_term->next;
+    Result_term->next = NULL;
 
 	while ( Multiple_term != NULL )
     {

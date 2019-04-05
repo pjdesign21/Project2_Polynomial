@@ -12,12 +12,10 @@
 
 extern void init()
 {
-	Poterm Head;
-	int32_t x;
+	Poterm Head = PolyIdentify("0");
+    int32_t x = 2;
 	char_t *str;
 	printf( "Input the first Polynomial\n" ); 
-	Head = PolyIdentify("0");
-    x = 2;
     while ( x != 0 )
 	{
 		switch (x)
@@ -71,18 +69,32 @@ static void output(Poterm t)
 	if(t == NULL) printf( "0" );
     while ( t != NULL )
     {
-    	if ( t != first_term ) printf( "%c", op(t) );
-        
-		if( t->x == 1) printf("xy^%lf",t->y);
-	    else if (t->y == 1) printf("x^%lfy",t->x);
-	    else if (t->x == 1 && t->y == 1) printf("xy");
-	    else printf("%lfx^%lfy^%lf",t->co,t->x,t->y);
-        
+    	if ( t != first_term )
+			printf( "%c%lf", op(t), t->co );
+        else 
+			printf( "%lf", t->co );
+		
+		if ( t->x != 0 )
+		{
+			printf( "x" );
+			if ( t->x != 1 ) printf( "^%d", t->x );
+		}
+
+		if ( t->y != 0 )
+		{
+			printf( "y" );
+			if ( t->y != 1 ) printf( "^%d", t->y );
+		}
+
 		t = t->next;
     }
+	printf( "\n" );
 }
 
-static char_t op(Poterm t){
-	if(t->co > 0) return '+';
-	else if(t->co < 0) return '-';
+static char_t op( Poterm t )
+{
+	if ( t->co > 0 ) 
+		return '+';
+	else if( t->co < 0 ) 
+		return '-';
 }
