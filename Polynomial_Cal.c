@@ -60,9 +60,15 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
             free( a ), free( b );
         } else
         {
-            if ( cmp == -1 ) a = b;   
-            p->next = a;
-            First_term = a->next;
+            if ( cmp == 1 )
+            {
+                p->next = a;
+                First_term = a->next;
+            } else
+            {
+                p->next = b;
+                Add_term = b->next;
+            }
             p = p->next;
         }
     }
