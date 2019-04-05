@@ -38,33 +38,33 @@ static Poterm product( Poterm TermTobeMult, Poterm term );
 /****************************************************************************
  * Function:    ADD
  * Brief:       add a term
- * Param [in]:  Poterm First_term,term Add_term
+ * Param [in]:  Poterm First_term, term Add_term
  * Param [out]: Poterm First_term
  * Author:      Zhengze Liu
  * Date:        2019/03/25
 ****************************************************************************/
-extern Poterm ADD(Poterm First_term,Poterm Add_term);
+extern Poterm ADD( Poterm First_term, Poterm Add_term );
 
 
 /****************************************************************************
  * Function:    SUBSTRACT
  * Brief:       substract a term
- * Param [in]:  Poterm First_term,term Minus_term
+ * Param [in]:  Poterm First_term, term Minus_term
  * Param [out]: Poterm First_term
  * Author:      Zhengze Liu
  * Date:        2019/03/25
 ****************************************************************************/
-extern Poterm SUBSTRACT(Poterm First_term,Poterm Minus_term);
+extern Poterm SUBSTRACT( Poterm First_term, Poterm Minus_term );
 
 
 /****************************************************************************
  * Function:    MULTIPLE
  * Brief:       multiple a term
- * Param [in]:  Poterm First_term,term Multiple_term
+ * Param [in]:  Poterm First_term, term Multiple_term
  * Param [out]: Poterm First_term
  * Author:      Zhengze Liu
  * Date:        2019/03/25
 ****************************************************************************/
-extern Poterm MULTIPLY(Poterm First_term,Poterm Multiple_term);
+extern Poterm MULTIPLY( Poterm First_term, Poterm Multiple_term );
 
 #endif
