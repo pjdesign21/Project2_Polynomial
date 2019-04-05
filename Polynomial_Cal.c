@@ -78,12 +78,12 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
     return Result_term;
 }
 
-extern Poterm MINUS(Poterm First_term,Poterm Minus_term)
+extern Poterm SUBSTRACT(Poterm First_term,Poterm Minus_term)
 {
     return ADD( First_term, coreverse( Minus_term ) );
 }
 
-extern Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term)
+extern Poterm MULTIPLY(Poterm First_term,Poterm Multiple_term)
 {
     Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
     Multiple_term = Multiple_term->next;

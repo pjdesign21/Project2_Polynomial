@@ -15,56 +15,57 @@ extern void init()
 	Poterm Head = PolyIdentify("0");
     int32_t x = 2;
 	char_t str[1000];
-	bool_t j=False;
+	bool_t j = False;
 	printf( "Input the first Polynomial\n" ); 
-    while ( x != 0 )
+    while ( x != 0 )											//exit if zero inputed
 	{
 		switch ( x )
 		{
-			case 1: 
+			case 1:												//clear
 				printf( "Polynomial clear\n" ); 
-				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
+				Head = MULTIPLY( Head, PolyIdentify( "0" ) );
 				output( Head );
 				break;
 			
 			case 2:
-				if(j==True)
+				if ( j == True )								//judge whether a polynomial has been inputed
 					printf( "Input the Polynomial to be added\n" ); 
-				j=True;
+				else j = True;
 				scanf("%s",str);
-				Head = ADD( Head, PolyIdentify(str) );
+				Head = ADD( Head, PolyIdentify(str) );			//add 
 				output( Head );
 				break;
 			
 			case 3:
-				printf( "Input the Polynomial to be subtracted\n" ); 
+				printf( "Input the Polynomial to be substracted\n" ); 
 				scanf("%s",str);
-				Head = MINUS( Head, PolyIdentify(str) );
+				Head = SUBSTRACT( Head, PolyIdentify(str) );	//substract
 				output( Head );
 				break;
 			
 			case 4: 
 				printf( "Input the Polynomial to be multiplied\n" ); 
 				scanf("%s",str);
-				Head = MULTIPLE( Head, PolyIdentify(str) );
+				Head = MULTIPLY( Head, PolyIdentify(str) );		//multiply
 				output( Head );
 				break;
 			
 			case 5:
-				output(Head);
+				output(Head);									//output
 				break;
 			
 			case 0: 
 				break;
-			default:
-				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
-				Head = ADD( Head, PolyIdentify(str) );
+
+			default:                                            
+				Head = MULTIPLY( Head, PolyIdentify( "0" ) );	//clear
+				Head = ADD( Head, PolyIdentify(str) );			//change into the newly inputed polynomial 
 				output( Head );
 				break;
 		}
-        if ( x != 0 ) output_guide();
-        scanf("%s",str);
-		x=str[0]-'0';
+        if ( x != 0 ) output_guide();							//output the guide
+        scanf("%s",str);										//scanf the option
+		x = str[0] - '0';
 	}
 }
 
@@ -89,23 +90,23 @@ static void output(Poterm t)
 	if(t == NULL) printf( "0" );
     while ( t != NULL )
     {
-    	if ( t != first_term )
-			printf( t->co > 0 ? "+%lf" : "%lf", t->co );
-        else 
-			printf( "%lf", t->co );
+    	if ( t != first_term && t->co > 0 )                     
+			printf( "+" );
+		else if ( t->co == -1 )
+			printf( "-" );		  								//print the operator
+        if ( t->co != 1 && t->co != -1 )
+			printf( "%.1lf", t->co );							//print the coefficient       
 		
-		if ( t->x != 0 )
+		if ( t->x != 0 )                                        //exceptional case:the power of x is zero or one
 		{
 			printf( "x" );
 			if ( t->x != 1 ) printf( "^%d", t->x );
 		}
-
-		if ( t->y != 0 )
+		if ( t->y != 0 )                                        //exceptional case:the power of y is zero or one
 		{
 			printf( "y" );
 			if ( t->y != 1 ) printf( "^%d", t->y );
 		}
-
 		t = t->next;
     }
 	printf( "\n" );

@@ -47,14 +47,14 @@ extern Poterm ADD(Poterm First_term,Poterm Add_term);
 
 
 /****************************************************************************
- * Function:    MINUS
- * Brief:       minus a term
+ * Function:    SUBSTRACT
+ * Brief:       substract a term
  * Param [in]:  Poterm First_term,term Minus_term
  * Param [out]: Poterm First_term
  * Author:      Zhengze Liu
  * Date:        2019/03/25
 ****************************************************************************/
-extern Poterm MINUS(Poterm First_term,Poterm Minus_term);
+extern Poterm SUBSTRACT(Poterm First_term,Poterm Minus_term);
 
 
 /****************************************************************************
@@ -65,6 +65,6 @@ extern Poterm MINUS(Poterm First_term,Poterm Minus_term);
  * Author:      Zhengze Liu
  * Date:        2019/03/25
 ****************************************************************************/
-extern Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term);
+extern Poterm MULTIPLY(Poterm First_term,Poterm Multiple_term);
 
 #endif
