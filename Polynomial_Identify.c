@@ -13,21 +13,21 @@
 
 extern int32_t Cmp( const void *a , const void *b ) 
 {
-	struct Term *c = (struct Term *)a; 
-	struct Term *d = (struct Term *)b; 
+	struct Term *c = (struct Term *)a;
+	struct Term *d = (struct Term *)b;
 	if(c->x+c->y != d->x+d->y) return d->x+d->y - c->x-c->y; 
-	else return d->x - c->x; 
+	else return d->x - c->x;
 }
 
 extern Poterm arrange( Poterm TermTobeArrange )
 {
     Poterm p = TermTobeArrange->next;
-    struct Term Tmp_term[ 10 ];
+    struct Term Tmp_term[ 20 ];//copy the link to an array
     int32_t n = 0,i;
     while ( p != NULL ) Tmp_term[ n++ ] = *p, p = p->next;
-    qsort( Tmp_term, n, sizeof(Tmp_term[0]), Cmp);
+    qsort( Tmp_term, n, sizeof(Tmp_term[0]), Cmp);// use qsort function in the stl.
     p = TermTobeArrange;
-    for (  i = 0; i < n; i++ ) 
+    for (  i = 0; i < n; i++ )//recreate a new link
     {
         p->next->x = Tmp_term[ i ].x;
         p->next->y = Tmp_term[ i ].y;
@@ -65,11 +65,11 @@ static double_t ReadNum(char *str,int32_t *l)
 	}
 	if(Minu==True)num=-num;
 	num/=Time;
-	if(num==0&&str[*l-1]=='0')
+	if(num==0&&str[*l-1]=='0')//if the string is '0'
 	return 0; 
 	if(num==0)
 		{
-			if(Minu==True)return -1;
+			if(Minu==True)return -1;//if the num is - in -xy.
 			else return 1;
 		}
 	return num;
@@ -103,7 +103,7 @@ Poterm PolyIdentify(char *str)
 		{
 			Co=True;
 			Cofficient=ReadNum(str,&l);
-			if((Isnum(str[l])||str[l]=='\0')&&Py==False&&Px==False)
+			if((Isnum(str[l])||str[l]=='\0')&&Py==False&&Px==False)//judge whether is a constant term
 			{ 
 				Powerofx=Powerofy=0;
 				Px=Py=True;
@@ -111,9 +111,9 @@ Poterm PolyIdentify(char *str)
 		}
 		if(Isx(str[l]))
 		{
-			if(Co==False)Cofficient=1; 
+			if(Co==False)Cofficient=1;//if there has no cofficient before term,like xy;
 			Px=True;
-			if(str[l+1]!='^')
+			if(str[l+1]!='^')//if the power of x is 1, we generally write it as x instead of x^1
 			{
 				Powerofx=1;
 				l++;
@@ -121,9 +121,9 @@ Poterm PolyIdentify(char *str)
 			else
 			{
 				l+=2;
-				Powerofx=ReadNum(str,&l);
+				Powerofx=ReadNum(str,&l);//Read the power of x;
 			}
-			if(str[l]!='y'&&Py==False)
+			if(str[l]!='y'&&Py==False)//if there is no y.
 			{
 				Py=True;
 				Powerofy=0;
@@ -131,10 +131,10 @@ Poterm PolyIdentify(char *str)
 		}
 		if(Isy(str[l]))
 		{
-			if(Co==False)Cofficient=1; 
+			if(Co==False)Cofficient=1; //if there has no cofficient before term,like xy;
 			Py=True;
 			
-			if(str[l+1]!='^')
+			if(str[l+1]!='^')//if the power of y is 1
 			{
 				Powerofy=1;
 				l++;
@@ -142,34 +142,20 @@ Poterm PolyIdentify(char *str)
 			else
 			{
 				l+=2;
-				Powerofy=ReadNum(str,&l);
+				Powerofy=ReadNum(str,&l);//Read the power of x;
 			}
-			if(str[l]!='x'&&Px==False)
+			if(str[l]!='x'&&Px==False)//if there is no y.
 			{
 				Px=True;
 				Powerofx=0;
 			}
 		}
-		if(Px==True&&Py==True)
+		if(Px==True&&Py==True)//if record the all term
 		{
 			if(Cofficient!=0)
-				Creat(Head,Powerofx,Powerofy,Cofficient);
-			Co=Px=Py=False;
+				Creat(Head,Powerofx,Powerofy,Cofficient);//creat a new link
+			Co=Px=Py=False;//reset
 		}
 	}
-	return arrange(Head);
+	return arrange(Head);//arrange the link
 }
-/*int main()
-{
-	char str[10000];
-	scanf("%s",str);
-	Poterm Head;
-	Head=PolyIdentify(str);
-	Head=Head->next;
-	while(Head!=NULL)
-	{
-		printf("%d,%d,%lf\n",Head->x,Head->y,Head->co);
-		Head=Head->next;
-	}
-	return 0;
-}*/

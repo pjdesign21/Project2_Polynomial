@@ -20,8 +20,6 @@ typedef int int32_t;
 typedef struct Term *Poterm;
 typedef double double_t;
 typedef enum{False,True}bool_t;
-typedef enum {Add,Minus}operator_t;
-
 struct Term
 {
 	int32_t x,y;				//power of x,y

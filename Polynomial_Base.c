@@ -14,7 +14,7 @@
 extern int32_t Powercmp(Poterm term_1,Poterm term_2)
 {
 	double power_1,power_2;
-	power_1=term_1->x+term_1->y;
+	power_1=term_1->x+term_1->y; 
 	power_2=term_2->x+term_2->y;
 	if(power_1>power_2)return 1;
 	if(power_1<power_2)return -1;
