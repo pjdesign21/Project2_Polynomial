@@ -81,7 +81,8 @@ Poterm PolyIdentify(char *str)
 	int32_t l;
 	l=0;
 	bool_t Px,Py,Co;
-	double_t Num,Cofficient,Powerofx,Powerofy;
+	double_t Num,Cofficient;
+	int32_t Powerofx,Powerofy;
 	Poterm Head;
 	Head=(Poterm)malloc(sizeof(struct Term));
 	Head->x=0;Head->y=0;Head->co=0;Head->next=NULL;
@@ -91,6 +92,11 @@ Poterm PolyIdentify(char *str)
 		{
 			Co=True;
 			Cofficient=ReadNum(str,&l);
+			if((Isnum(str[l])||str[l]=='\0')&&Py==False&&Px==False)
+			{
+				Powerofx=Powerofy=0;
+				Px=Py=True;
+			}
 		}
 		if(Isx(str[l]))
 		{
@@ -106,7 +112,7 @@ Poterm PolyIdentify(char *str)
 				l+=2;
 				Powerofx=ReadNum(str,&l);
 			}
-			if(str[l]!='y')
+			if(str[l]!='y'&&Py==False)
 			{
 				Py=True;
 				Powerofy=0;
@@ -127,7 +133,7 @@ Poterm PolyIdentify(char *str)
 				l+=2;
 				Powerofy=ReadNum(str,&l);
 			}
-			if(str[l]!='x')
+			if(str[l]!='x'&&Px==False)
 			{
 				Px=True;
 				Powerofx=0;
@@ -139,7 +145,7 @@ Poterm PolyIdentify(char *str)
 			Co=Px=Py=False;
 		}
 	}
-	return arrange( Head );
+	return arrange(Head);
 }
 /*int main()
 {
@@ -150,7 +156,7 @@ Poterm PolyIdentify(char *str)
 	Head=Head->next;
 	while(Head!=NULL)
 	{
-		printf("%lf,%lf,%lf\n",Head->x,Head->y,Head->co);
+		printf("%d,%d,%lf\n",Head->x,Head->y,Head->co);
 		Head=Head->next;
 	}
 	return 0;
