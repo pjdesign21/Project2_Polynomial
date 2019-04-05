@@ -14,7 +14,7 @@ extern void init()
 {
 	Poterm Head = PolyIdentify("0");
     int32_t x = 2;
-	char_t *str;
+	char_t str[1000];
 	printf( "Input the first Polynomial\n" ); 
     while ( x != 0 )
 	{

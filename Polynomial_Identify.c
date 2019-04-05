@@ -95,7 +95,7 @@ Poterm PolyIdentify(char *str)
 			Co=True;
 			Cofficient=ReadNum(str,&l);
 			if((Isnum(str[l])||str[l]=='\0')&&Py==False&&Px==False)
-			{
+			{ 
 				Powerofx=Powerofy=0;
 				Px=Py=True;
 			}
@@ -143,7 +143,8 @@ Poterm PolyIdentify(char *str)
 		}
 		if(Px==True&&Py==True)
 		{
-			Creat(Head,Powerofx,Powerofy,Cofficient);
+			if(Cofficient!=0)
+				Creat(Head,Powerofx,Powerofy,Cofficient);
 			Co=Px=Py=False;
 		}
 	}
