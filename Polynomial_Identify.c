@@ -57,6 +57,8 @@ static double_t ReadNum(char *str,int32_t *l)
 	}
 	if(Minu==True)num=-num;
 	num/=Time;
+	if(num==0&&str[*l-1]=='0')
+	return 0; 
 	if(num==0)
 		{
 			if(Minu==True)return -1;
