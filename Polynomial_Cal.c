@@ -1,8 +1,8 @@
 /****************************************************************************
- * \brief       
+ * \brief       Calculator
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
  * \verson      1.0
- * \author      
+ * \author      Zhengze Liu
  * \file        Polynimial_Cal.c
  * 
  * \date 2019/03/25 Fang :created
@@ -53,7 +53,7 @@ extern Poterm ADD( Poterm First_term, Poterm Add_term )
         {
             if ( a->co + b->co != 0 )
             {
-                Creat( p, a->x, a->y, a->co + a->co );
+                Creat( p, a->x, a->y, a->co + b->co );
                 p = p->next;
             }
             First_term = a->next, Add_term = b->next;

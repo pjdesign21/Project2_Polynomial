@@ -1,8 +1,8 @@
 /****************************************************************************
- * \brief       
+ * \brief       Console
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
  * \verson      1.0
- * \author      
+ * \author      Chenyun Lu
  * \file        Polynomial_Interact.h
  * 
  * \date 2019/03/25 Fang :created
@@ -16,33 +16,32 @@
 
 /****************************************************************************
  * Function:    init
- * Brief:       form a interactive interface
+ * Brief:       form an interactive interface
  * Param [in]:  NA
  * Param [out]: NA
- * Author:      
- * Date:        2019/03/25
+ * Author:      Chenyun Lu
+ * Date:        2019/04/03
 ****************************************************************************/
 extern void init();
 
+/****************************************************************************
+ * Function:    output_guide
+ * Brief:       Output guide
+ * Param [in]:  NA
+ * Param [out]: NA
+ * Author:      Chenyun Lu
+ * Date:        2019/04/05
+****************************************************************************/
+static void output_guide();
 
 /****************************************************************************
  * Function:    output
- * Brief:       Output the answer 
+ * Brief:       Output the result 
  * Param [in]:  Poterm t
  * Param [out]: NA
- * Author:      
- * Date:        2019/03/25
+ * Author:      Chenyun Lu
+ * Date:        2019/04/03
 ****************************************************************************/
-static void output(Poterm t);
-
-/****************************************************************************
- * Function:    
- * Brief:       Output the answer 
- * Param [in]:  Poterm t
- * Param [out]: NA
- * Author:      
- * Date:        2019/03/25
-****************************************************************************/
-static char_t op(Poterm t);
+static void output( Poterm t );
 
 #endif

@@ -1,8 +1,8 @@
 /****************************************************************************
- * \brief       
+ * \brief       Console
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
  * \verson      1.0
- * \author      
+ * \author      Chenyun Lu
  * \file        Polynomial_Interact.c
  * 
  * \date 2019/03/25 Fang :created
@@ -18,9 +18,10 @@ extern void init()
 	printf( "Input the first Polynomial\n" ); 
     while ( x != 0 )
 	{
-		switch (x)
+		switch ( x )
 		{
 			case 1: 
+				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
 				break;
 			
 			case 2:
@@ -48,18 +49,21 @@ extern void init()
 			case 0: 
 				break;
 		}
-        if ( x != 0 ) 
-		{
-        	printf("Input the numbers\n");
-	        printf("1-Polynomial Input\n");
-	        printf("2-Polynomial Addition(+)\n");
-	        printf("3-Polynomial Substraction(-)\n");
-	        printf("4-Polynomial Multiplication(*)\n");
-	        printf("5-Polynomial Output\n");
-	        printf("0-Exit\n");
-        }
+        if ( x != 0 ) output_guide();
 		scanf( "%d", &x );
 	}
+}
+
+static void output_guide()
+{
+	printf("Input the numbers\n");
+    printf("1-Polynomial Clear\n");
+    printf("2-Polynomial Addition(+)\n");
+    printf("3-Polynomial Substraction(-)\n");
+    printf("4-Polynomial Multiplication(*)\n");
+    printf("5-Polynomial Output\n");
+    printf("0-Exit\n");
+
 }
 
 static void output(Poterm t)
@@ -70,7 +74,7 @@ static void output(Poterm t)
     while ( t != NULL )
     {
     	if ( t != first_term )
-			printf( "%c%lf", op(t), t->co );
+			printf( t->co > 0 ? "+%lf" : "%lf", t->co );
         else 
 			printf( "%lf", t->co );
 		
@@ -89,12 +93,4 @@ static void output(Poterm t)
 		t = t->next;
     }
 	printf( "\n" );
-}
-
-static char_t op( Poterm t )
-{
-	if ( t->co > 0 ) 
-		return '+';
-	else if( t->co < 0 ) 
-		return '-';
 }
