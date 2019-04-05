@@ -11,9 +11,6 @@
 
 #include "Polynomial_Identify.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-
 extern Poterm arrange( Poterm TermTobeArrange )
 {
     Poterm p = TermTobeArrange->next;

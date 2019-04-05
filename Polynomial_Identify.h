@@ -9,8 +9,10 @@
 ****************************************************************************/
 
 
-#include "Polynomial_Base.h"
+#ifndef _POLYNOMIAL_IDENTIFY_H
+#define _POLYNOMIAL_IDENTIFY_H
 
+#include "Polynomial_Base.h"
 
 /****************************************************************************
  * Function:    arrange
@@ -76,3 +78,5 @@ static double_t ReadNum(char *str,int32_t *l);
  * Date:        2019/03/25
 ****************************************************************************/
 Poterm PolyIdentify(char *str);
+
+#endif

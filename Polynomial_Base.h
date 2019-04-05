@@ -11,8 +11,9 @@
 #ifndef _POLYNOMIAL_H
 #define _POLYNOMIAL_H
 
-#include <stdlib.h>
 
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef char char_t;
 typedef int int32_t;

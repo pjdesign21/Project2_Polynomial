@@ -8,7 +8,7 @@
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
 
-#include "Polynomial_Cal.h" 
+#include "Polynomial_Cal.h"
 
 static Poterm coreverse( Poterm TermTobeReverse )
 {
@@ -19,7 +19,7 @@ static Poterm coreverse( Poterm TermTobeReverse )
 
 static Poterm product( Poterm TermTobeMult, Poterm term )
 {
-    Poterm Result_term = malloc( sizeof( struct Term ) );
+    Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
     Poterm p = Result_term;
     TermTobeMult = TermTobeMult->next;
     while ( TermTobeMult != NULL )
@@ -33,7 +33,7 @@ static Poterm product( Poterm TermTobeMult, Poterm term )
 
 extern Poterm ADD( Poterm First_term, Poterm Add_term )
 {
-    Poterm Result_term = malloc( sizeof( struct Term ) );
+    Poterm Result_term = ( Poterm )malloc( sizeof( struct Term ) );
     Poterm p = Result_term, a = First_term, b = Add_term;
 
     Result_term->next = NULL;
@@ -74,7 +74,7 @@ extern Poterm MINUS(Poterm First_term,Poterm Minus_term)
 
 extern Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term)
 {
-    Poterm Result_term = malloc( sizeof( struct Term ) );
+    Poterm Result_term = (Poterm )malloc( sizeof( struct Term ) );
     Multiple_term = Multiple_term->next;
 
 	while ( Multiple_term != NULL )

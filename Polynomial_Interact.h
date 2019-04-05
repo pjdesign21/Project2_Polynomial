@@ -7,6 +7,10 @@
  * 
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
+//#include "Polynomial_Base.h"
+
+#ifndef _POLYNOMIAL_INTERACT_H
+#define _POLYNOMIAL_INTERACT_H
 
 #include "Polynomial_Base.h"
 
@@ -18,7 +22,7 @@
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-void init();
+extern void init();
 
 
 /****************************************************************************
@@ -29,10 +33,16 @@ void init();
  * Author:      
  * Date:        2019/03/25
 ****************************************************************************/
-void output(Poterm t);
+static void output(Poterm t);
 
+/****************************************************************************
+ * Function:    
+ * Brief:       Output the answer 
+ * Param [in]:  Poterm t
+ * Param [out]: NA
+ * Author:      
+ * Date:        2019/03/25
+****************************************************************************/
+static char_t op(Poterm t);
 
-Poterm function1 (char *str);
-Poterm function2 (char *str);
-Poterm function3 (char *str);
-Poterm function4 (char *str);
+#endif

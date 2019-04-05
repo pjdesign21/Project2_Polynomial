@@ -8,8 +8,10 @@
  * \date 2019/03/25 Fang :created
 ****************************************************************************/
 
-#include "Polynomial_base.c"
+#ifndef _POLYNOMIAL_CAL_H
+#define _POLYNOMIAL_CAL_H
 
+#include "Polynomial_Base.h"
 
 /****************************************************************************
  * Function:    coreverse
@@ -64,3 +66,5 @@ extern Poterm MINUS(Poterm First_term,Poterm Minus_term);
  * Date:        2019/03/25
 ****************************************************************************/
 extern Poterm MULTIPLE(Poterm First_term,Poterm Multiple_term);
+
+#endif
