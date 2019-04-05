@@ -15,29 +15,36 @@ extern void init()
 	Poterm Head = PolyIdentify("0");
     int32_t x = 2;
 	char_t str[1000];
+	bool_t j=False;
 	printf( "Input the first Polynomial\n" ); 
     while ( x != 0 )
 	{
 		switch ( x )
 		{
 			case 1: 
+				printf( "Polynomial clear\n" ); 
 				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
 				output( Head );
 				break;
 			
 			case 2:
+				if(j==True)
+					printf( "Input the Polynomial to be added\n" ); 
+				j=True;
 				scanf("%s",str);
 				Head = ADD( Head, PolyIdentify(str) );
 				output( Head );
 				break;
 			
 			case 3:
+				printf( "Input the Polynomial to be subtracted\n" ); 
 				scanf("%s",str);
 				Head = MINUS( Head, PolyIdentify(str) );
 				output( Head );
 				break;
 			
 			case 4: 
+				printf( "Input the Polynomial to be multiplied\n" ); 
 				scanf("%s",str);
 				Head = MULTIPLE( Head, PolyIdentify(str) );
 				output( Head );
@@ -49,14 +56,21 @@ extern void init()
 			
 			case 0: 
 				break;
+			default:
+				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
+				Head = ADD( Head, PolyIdentify(str) );
+				output( Head );
+				break;
 		}
         if ( x != 0 ) output_guide();
-		scanf( "%d", &x );
+        scanf("%s",str);
+		x=str[0]-'0';
 	}
 }
 
 static void output_guide()
-{
+{	
+	printf("！！！！！！！！！！！！！！！！！！！！！！\n");
 	printf("Input the numbers\n");
     printf("1-Polynomial Clear\n");
     printf("2-Polynomial Addition(+)\n");
@@ -64,13 +78,14 @@ static void output_guide()
     printf("4-Polynomial Multiplication(*)\n");
     printf("5-Polynomial Output\n");
     printf("0-Exit\n");
-
+	printf("！！！！！！！！！！！！！！！！！！！！！！\n");
 }
 
 static void output(Poterm t)
 {
 	Poterm first_term;
 	first_term = t = t->next; 
+	printf("The solution:") ;
 	if(t == NULL) printf( "0" );
     while ( t != NULL )
     {

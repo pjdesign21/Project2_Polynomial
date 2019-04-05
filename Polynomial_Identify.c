@@ -11,6 +11,14 @@
 
 #include "Polynomial_Identify.h"
 
+extern int32_t Cmp( const void *a , const void *b ) 
+{
+	struct Term *c = (struct Term *)a; 
+	struct Term *d = (struct Term *)b; 
+	if(c->x+c->y != d->x+d->y) return d->x+d->y - c->x-c->y; 
+	else return d->x - c->x; 
+}
+
 extern Poterm arrange( Poterm TermTobeArrange )
 {
     Poterm p = TermTobeArrange->next;

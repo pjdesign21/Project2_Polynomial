@@ -10,11 +10,6 @@
 
 #include "Polynomial_Base.h" 
 
-extern operator_t OpType(char op)
-{
-	if(op=='+')return Add;
-	if(op=='-')return Minus;
-}
 
 extern int32_t Powercmp(Poterm term_1,Poterm term_2)
 {
@@ -28,13 +23,6 @@ extern int32_t Powercmp(Poterm term_1,Poterm term_2)
 	return 0;
 }
 
-extern int32_t Cmp( const void *a , const void *b ) 
-{
-	struct Term *c = (struct Term *)a; 
-	struct Term *d = (struct Term *)b; 
-	if(c->x+c->y != d->x+d->y) return d->x+d->y - c->x-c->y; 
-	else return d->x - c->x; 
-}
 
 extern void Creat(Poterm TermTobeAdd,int32_t Powerx,int32_t Powery,double Cofficient)
 {

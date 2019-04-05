@@ -13,7 +13,15 @@
 #define _POLYNOMIAL_IDENTIFY_H
 
 #include "Polynomial_Base.h"
-
+/****************************************************************************
+ * Function:    Cmp
+ * Brief:       function for qort
+ * Param [in]:  const void *a , const void *b
+ * Param [out]: int32_t
+ * Author:      Fang
+ * Date:        2019/03/25
+****************************************************************************/
+extern int32_t Cmp( const void *a , const void *b );
 /****************************************************************************
  * Function:    arrange
  * Brief:       Arrange the term by power

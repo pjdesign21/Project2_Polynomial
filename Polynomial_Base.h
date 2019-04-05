@@ -28,24 +28,8 @@ struct Term
 	double_t co;				//coefficient of the term
 	Poterm next;
 };
-/****************************************************************************
- * Function:    OpType 
- * Brief:       Return the type of Operator
- * Param [in]:  char
- * Param [out]: operator_t
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-extern operator_t OpType(char op);
-/****************************************************************************
- * Function:    Cmp
- * Brief:       function for qort
- * Param [in]:  const void *a , const void *b
- * Param [out]: int32_t
- * Author:      Fang
- * Date:        2019/03/25
-****************************************************************************/
-extern int32_t Cmp( const void *a , const void *b );
+
+
 /****************************************************************************
  * Function:    Powercmp 
  * Brief:       compare the power of term,if powera>powerb return 1
