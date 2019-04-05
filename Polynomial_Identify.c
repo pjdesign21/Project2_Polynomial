@@ -2,7 +2,7 @@
  * \brief       
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
  * \verson      1.0
- * \author      Fang
+ * \author      
  * \file        Polynomial_Identify.c
  * 
  * \date 2019/03/25 Fang :created
@@ -88,6 +88,7 @@ Poterm PolyIdentify(char *str)
 	Poterm Head;
 	Head=(Poterm)malloc(sizeof(struct Term));
 	Head->x=0;Head->y=0;Head->co=0;Head->next=NULL;
+	Py=Px=False;
 	while(str[l]!='\0')
 	{
 		if(Isnum(str[l]))
