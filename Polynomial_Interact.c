@@ -22,6 +22,7 @@ extern void init()
 		{
 			case 1: 
 				Head = MULTIPLE( Head, PolyIdentify( "0" ) );
+				output( Head );
 				break;
 			
 			case 2:
@@ -34,13 +35,13 @@ extern void init()
 				scanf("%s",str);
 				Head = MINUS( Head, PolyIdentify(str) );
 				output( Head );
-			break;
+				break;
 			
 			case 4: 
 				scanf("%s",str);
 				Head = MULTIPLE( Head, PolyIdentify(str) );
 				output( Head );
-			break;
+				break;
 			
 			case 5:
 				output(Head);
