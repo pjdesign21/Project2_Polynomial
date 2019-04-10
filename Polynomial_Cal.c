@@ -1,7 +1,7 @@
 /****************************************************************************
- * \brief       Calculator
+ * \brief       implementation of calculator
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
+ * \verson      1.2
  * \author      Zhengze Liu
  * \file        Polynimial_Cal.c
  * 

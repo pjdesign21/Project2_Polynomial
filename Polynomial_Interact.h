@@ -1,7 +1,7 @@
 /****************************************************************************
  * \brief       Console
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
+ * \verson      1.2
  * \author      Chenyun Lu
  * \file        Polynomial_Interact.h
  * 

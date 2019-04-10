@@ -1,8 +1,8 @@
 /****************************************************************************
- * \brief       
+ * \brief       basic types and functions
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
- * \author      
+ * \verson      1.2
+ * \author      Fang
  * \file        Polynomial_Base.h
  * 
  * \date 2019/03/25 Fang :created

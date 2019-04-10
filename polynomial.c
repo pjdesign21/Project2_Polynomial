@@ -1,7 +1,7 @@
 /****************************************************************************
- * \brief       
+ * \brief       the main function
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
+ * \verson      1.2
  * \author      Zhengze Liu, Fang, Chenyun Lu 
  * \file        Polynomial.c
  * 

@@ -1,7 +1,7 @@
 /****************************************************************************
- * \brief       
+ * \brief       calculator
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
+ * \verson      1.2
  * \author      Zhengze Liu
  * \file        Polynimial_Cal.h
  * 
@@ -12,6 +12,7 @@
 #define _POLYNOMIAL_CAL_H
 
 #include "Polynomial_Base.h"
+
 
 /****************************************************************************
  * Function:    coreverse

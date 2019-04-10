@@ -1,8 +1,8 @@
 /****************************************************************************
- * \brief       
+ * \brief       identification of the string polynomial
  * \copyright   2018-2019, Zhejiang University, Program Design Project, Group 6. 
- * \verson      1.0
- * \author      
+ * \verson      1.2
+ * \author      Fang
  * \file        Polynomial_Identify.h
  * 
  * \date 2019/03/25 Fang :created
@@ -13,6 +13,8 @@
 #define _POLYNOMIAL_IDENTIFY_H
 
 #include "Polynomial_Base.h"
+
+
 /****************************************************************************
  * Function:    Cmp
  * Brief:       function for qort
@@ -22,6 +24,8 @@
  * Date:        2019/03/25
 ****************************************************************************/
 extern int32_t Cmp( const void *a , const void *b );
+
+
 /****************************************************************************
  * Function:    arrange
  * Brief:       Arrange the term by power
